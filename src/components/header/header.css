@@ -6,3 +6,19 @@
     border: 2px solid #00D8FF;
 }
 
+.array-initial-screen{
+    display: flex;
+    justify-content: flex-start;
+    margin: 2.5rem 0 0 0.4rem;
+}
+
+.array-initial-screen i:not(:hover){
+    color: #00D8FF; 
+    transition: all 3s;
+}
+
+.array-initial-screen i:hover{
+    color: white;
+    transform: scale(1.1);
+    transition: 0.3s;
+}

@@ -19,6 +19,7 @@ const Nav = () => {
                 <ul className="nav">
                     <li><NavLink to="/home">Home</NavLink></li>
                     <li><NavLink to="/button">Button</NavLink></li>
+                    <li><NavLink to="/button">Button</NavLink></li>
                 </ul>
             </nav>
             <div className='social-media-icons'>
