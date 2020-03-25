@@ -1,13 +1,23 @@
 import React, { Fragment } from 'react';
+import { Redirect } from 'react-router-dom';
 
-const Home = () => {
-    return(
-        <Fragment>
-            <p>Home</p>
-            Hello Home
-            dasd
-        </Fragment>
-    )
+import './home.css';
+
+const Home = ({isLoggedIn}) => {
+
+    if(isLoggedIn){
+        return(
+            <Fragment>
+                <div className="wrapper-home">
+                    <p>Home</p>
+                    Hello Home
+                    dasd
+                </div>
+            </Fragment>
+        )
+    }
+
+    return <Redirect to="/login"/>
 }
 
 export default Home;

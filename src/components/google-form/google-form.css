@@ -1,0 +1,17 @@
+.header-form{
+    text-align: center;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin: -20px 42% 15px 42%;
+    padding-bottom: 7px;
+    border-bottom: 3px solid transparent;
+    border-color: tomato;
+}
+
+.wrapper-form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -70px;
+}
+

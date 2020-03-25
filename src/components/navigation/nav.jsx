@@ -20,6 +20,7 @@ const Nav = () => {
                     <li><NavLink to="/home">Home</NavLink></li>
                     <li><NavLink to="/button">Button</NavLink></li>
                     <li><NavLink to="/button">Button</NavLink></li>
+                    <li><NavLink to="/login">Log in</NavLink></li>
                 </ul>
             </nav>
             <div className='social-media-icons'>

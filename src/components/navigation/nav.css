@@ -78,7 +78,7 @@
     transition: all 0.5s;
 }
 
-.nav a.active {
+.nav a.active{
     border-color: #00D8FF;
     -webkit-animation: swing 0s ease;
     animation: swing 0s ease;
