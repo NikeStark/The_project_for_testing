@@ -1,0 +1,124 @@
+/*----- HEADER AND CONTEXT -----*/
+
+.section-greeting h2{
+    text-align: center;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin: -20px 40% 15px 40%;
+    padding-bottom: 7px;
+    border-bottom: 3px solid transparent;
+    border-color: tomato;
+}
+
+.section-greeting .context, .button_send_request {
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    text-align: center;
+}
+
+.section-greeting .context, .button_send_request p{
+    padding: 5px 0;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+/*----- AUTHOR IMAGES -----*/
+
+.wrapper-pict{
+    display: flex;
+    justify-content: center;
+}
+
+.author-pict{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    width: 255px;
+}
+
+.author{
+    background-color: black;
+    width: 77px;
+    height: 82px;
+    border-radius: 50%;
+    border: 2px solid tomato;
+    transition: all 0.5s;
+    cursor: pointer;
+    backface-visibility: hidden;
+}
+
+.author:first-child{
+    background-color: black;
+    width: 55px;
+    height: 60px;
+    transition: none;
+    cursor: not-allowed;
+}
+
+.author:last-child{
+    background-color: black;
+    width: 55px;
+    height: 60px;
+    transition: none;
+    cursor: not-allowed;
+}
+
+.author:hover{
+    transform: scale(1.6);
+    z-index: 1;
+}
+
+.author:first-child:hover{
+    transform: none;
+}
+
+.author:last-child:hover{
+    transform: none;
+}
+
+/*----- TEXT AND ARROW TO BUTTON -----*/
+
+.button_send_request p{
+    margin: 35px 0 20px 0;
+}
+
+.arrow-to-form{
+    display: flex;
+    justify-content: center;
+    margin: -83px 0 0 310px;
+}
+
+/*----- ANIMATION FOR BUTTON FORM -----*/
+
+.pulse-button {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    box-shadow: 0 0 0 0 rgba(233, 211, 11, 0.952);
+    border-radius: 50%;
+    background-image: url("./google-form.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    -webkit-animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulse 2.5s infinite cubic-bezier(0.66, 0, 0, 1);
+  }
+
+  .pulse-button:hover{
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+  }
+  
+  @-webkit-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+  @-moz-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+  @-ms-keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}
+  @keyframes pulse {to {box-shadow: 0 0 0 15px rgba(232, 76, 61, 0);}}

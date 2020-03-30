@@ -20,7 +20,7 @@ export default class App extends Component{
             isLoggedIn: true
         })
     }
-
+ 
     render(){
 
         const{isLoggedIn} = this.state
@@ -28,7 +28,7 @@ export default class App extends Component{
         return(
                 <Router>
                     <Header />
-
+                        
                         <div className='route-context'>
                             <div className='inside'>
                             <Switch>
