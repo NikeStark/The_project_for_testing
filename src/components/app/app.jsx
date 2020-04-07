@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import Home from '../home/home.jsx';
-import Button from '../button/button.jsx';
+import SectionDataList from '../section-data-list/section-data-list.jsx';
 import Header from '../header/header.jsx';
 import SectionGreeting from '../section-welcome/section-greeting.jsx';
 import GoogleForm from '../google-form/google-form.jsx';
@@ -55,8 +55,8 @@ export default class App extends Component{
                                     )}
                                 />
 
-                                <Route path="/button" component={Button}/>
-                                <Route path="/button" component={Button}/>
+                                <Route path="/section-data-list" component={SectionDataList} />
+                                <Route path="/section-data-list" component={SectionDataList} />
 
                                 {/*<Redirect to="/"/>*/}
                                 <Route render={() => <h2 

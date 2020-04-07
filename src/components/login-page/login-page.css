@@ -22,7 +22,7 @@
 }
 
 .btn-login-page button{
-    width: 6%;
+    width: 9%;
     padding: 5px;
     border-style: none;
     color: #fff;
@@ -34,8 +34,16 @@
 }
 
 .btn-login-page button:hover{
-    width: 10%;
+    width: 11%;
     color:  #51a3a3;
     background-color: #fff;
     cursor: pointer;
+}
+
+.btn-login-page span{
+    color: white;
+}
+
+.btn-login-page:hover span{
+    color: #51a3a3;
 }

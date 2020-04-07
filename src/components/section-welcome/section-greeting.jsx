@@ -18,14 +18,18 @@ export default class SectionGreeting extends Component{
     }
 
     componentDidMount(){
-        setTimeout(() => {
+        this.timeout = setTimeout(() => {
             this.fetchData();
-        }, 1500)
+        }, 1000);
+    }
+
+    componentWillUnmount(){
+        clearTimeout(this.timeout);
     }
 
     render(){
     const{loading} = this.state;
-    const spinner = loading ? <Spinner/> : null;
+    const spinner = loading ? <Spinner /> : null;
     const content = !loading ? <SectionGreetingData /> : null;
    
     return(

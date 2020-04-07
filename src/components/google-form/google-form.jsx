@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import './google-form.css';
 
@@ -21,3 +22,7 @@ const GoogleForm = ({isLoggedIn}) => {
     }
 
     export default GoogleForm;
+
+    GoogleForm.propTypes = {
+        isLoggedIn: PropTypes.bool
+    }

@@ -2,10 +2,12 @@ import React, { Fragment } from 'react';
 import {Link} from 'react-router-dom';
 
 import './section-greeting-data.css';
+import ModalView from '../modal-view/modal-view.jsx';
 
 const SectionGreetingData = () => {
     return(
         <Fragment>
+            <ModalView />
             <h2>Welcome to my application!</h2> 
             <div className="context">
                 <p>Hello my favorite guest! This is the testing website for looking</p>

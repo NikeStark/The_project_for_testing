@@ -1,0 +1,66 @@
+.book-elements{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.title-over-books{
+    text-align: center;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin: -20px 45% 35px 45%;
+    padding-bottom: 3px;
+    border-bottom: 3px solid transparent;
+    border-color: tomato;
+}
+
+.book-elements li{
+    background-color: white;
+    border: 2px solid white;
+}
+
+.book-elements li:hover{
+    border: 2px solid tomato;
+    cursor: pointer;
+}
+
+.wrapper-book h3, span{
+    color: black;
+    padding: 5px;
+}
+
+.wrapper-book{
+    padding-bottom: 10px;
+}
+
+.wrapper-book:hover h3{
+    color: tomato;
+}
+
+.wrapper-book:hover span{
+    color: white;
+}
+
+.wrapper-book:hover{
+    background-color: black;
+}
+
+.wrapper-book h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.2px;
+}
+
+.wrapper-book span{
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.test{
+    width: 300px;
+    height: 300px;
+    color: red;
+    z-index: 9999;
+}

@@ -1,0 +1,61 @@
+.wrapper-modal{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 99;
+}
+
+.wrapper-modal img{
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    opacity: 0.3;
+}
+
+.wrapper-modal img:hover{
+    opacity: 1;
+}
+
+.wrapper-modal button{
+    display: none;
+    position: relative;
+    z-index: 999;
+    background-color: black;
+    color: #00D8FF;
+    cursor: pointer;
+    margin: 3px;
+    padding: 4px 7px;
+    border-radius: 50%;
+    border: 2px solid #00D8FF;
+    transition: all 0.3s;
+}
+
+.wrapper-modal button:hover{
+    border-color: #FF6347;
+    color: white;
+    transform: rotate(360deg);
+}
+
+.wrapper-modal span{
+    position: absolute;
+    text-align: center;
+    color: #00D8FF;
+    font-style: oblique;
+    font-weight: bolder;
+    left: 320px;
+    top: 10px;
+}
+
+.wrapper-modal:hover span{
+    display: none;
+}
+
+.wrapper-modal:hover button{
+    display: block;
+}
+
