@@ -1,6 +1,6 @@
 .book-elements{
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     flex-wrap: wrap;
     list-style-type: none;
 }
@@ -10,7 +10,7 @@
     font-weight: lighter;
     word-spacing: 2px;
     letter-spacing: 1px;
-    margin: -20px 45% 35px 45%;
+    margin: -20px 45% 45px 45%;
     padding-bottom: 3px;
     border-bottom: 3px solid transparent;
     border-color: tomato;
@@ -19,6 +19,9 @@
 .book-elements li{
     background-color: white;
     border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 50px 25px;
 }
 
 .book-elements li:hover{
@@ -58,9 +61,15 @@
     letter-spacing: 0.5px;
 }
 
-.test{
-    width: 300px;
-    height: 300px;
-    color: red;
-    z-index: 9999;
+.wrapper-book .title-and-author{
+     max-width: 220px;
+     height: 75px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;      
+}
+
+.book-sale{
+    position: absolute;
+    margin: -25px 0 0 170px;
 }

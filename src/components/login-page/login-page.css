@@ -25,8 +25,8 @@
     width: 9%;
     padding: 5px;
     border-style: none;
-    color: #fff;
     border: 2px solid #51a3a3;
+    color: #fff;
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #51a3a3;
@@ -35,15 +35,15 @@
 
 .btn-login-page button:hover{
     width: 11%;
-    color:  #51a3a3;
     background-color: #fff;
+    color: #51a3a3;
     cursor: pointer;
 }
 
-.btn-login-page span{
+.btn-login-page button span{
     color: white;
 }
 
-.btn-login-page:hover span{
+.btn-login-page button:hover span{
     color: #51a3a3;
 }

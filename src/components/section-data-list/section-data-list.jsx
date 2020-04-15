@@ -4,39 +4,23 @@ import ArrayBooksData from './array-data.js';
 import './section-data-list.css';
 import Spinner from '../spinner/spinner.jsx';
 import SearchPanel from '../search-panel/search-panel.jsx';
+import SearchFailed from '../search-panel/search-failed.jsx';
+import SectionDataListProduct from '../section-data-list-product/section-data-list-product.jsx';
 
 export default class SectionDataList extends Component{
     constructor(){
         super();
         this.state = {
             filter: "",
-            data: [
-      {
-        fname: "Jayne",
-        lname: "Washington",
-        email: "jaynewashington@exposa.com",
-        gender: "female"
-      },
-      {
-        fname: "Peterson",
-        lname: "Dalton",
-        email: "petersondalton@exposa.com",
-        gender: "male"
-      },
-      {
-        fname: "Velazquez",
-        lname: "Calderon",
-        email: "velazquezcalderon@exposa.com",
-        gender: "male"
-      },
-      {
-        fname: "Norman",
-        lname: "Reed",
-        email: "normanreed@exposa.com",
-        gender: "male"
-      }
-    ],
-            loading: true
+            data: ArrayBooksData,
+            loading: true,
+            showProduct: false,
+            dataModal:{
+                imageLink:"",
+                imgHeight:"",
+                title:"",
+                author:"",
+            }
         }
     }
 
@@ -49,46 +33,70 @@ export default class SectionDataList extends Component{
     componentDidMount(){
         this.timeout = setTimeout(() => {
             this.fetchBooks();
-        }, 3000);
+        }, 100);
     }
 
     componentWillUnmount(){
         clearTimeout(this.timeout);
     }
 
-    handleChange = (e) => {
-        this.setState({
-            filter: e.target.value
+    handleChange = (event) => {
+        this.setState({ 
+            filter: event.target.value 
         });
+        
+    };
+
+    getProductData = (data) => {
+        this.setState({
+            showProduct: true,
+            dataModal: data 
+        })
+    }
+
+    hideProductData = () => {
+        this.setState({
+            showProduct: false
+        })
     }
 
     render(){
-        const{filter, data} = this.state;
+        const { filter, data, showProduct, dataModal } = this.state;
+
         const lowercasedFilter = filter.toLowerCase();
-        const filteredData = data.filter((item) => {
-            return Object.keys(item).some((key) => {
-                item[key].toLowerCase().includes(lowercasedFilter)
-            })
-        })
+        const filteredData = data.filter(item => {
+          return Object.keys(item).some(key =>
+            item[key].toString().toLowerCase().includes(lowercasedFilter)
+          );
+        });
 
         const{loading} = this.state;
         const spinner = loading ? <Spinner /> : null;
-        const content = !loading ? <BooksList books={ArrayBooksData} /> : null;
+        const content = !loading ? <BooksList filteredData={filteredData} getProductData={this.getProductData}/> : null;
+        const search = !loading ? <SearchPanel handleChange={this.handleChange}/> : null;
+
+        if(filteredData === undefined || filteredData.length == 0){
+            return(
+            <Fragment>
+                <h2 className="title-over-books">List of books</h2>
+                <SearchFailed />
+                {search}
+                {content} 
+            </Fragment>
+            )
+        }     
 
         return(
             <Fragment>
                 <h2 className="title-over-books">List of books</h2>
-                    
-                    <input value={filter} onChange={this.handleChange} />
-                    {filteredData.map((item) => (
-                    <div key={item.email}>
-                    <div className="test">
-                    {item.fname} - {item.lname} - {item.gender} - {item.email}
-                    </div>
-                    </div>
-                     
-                ))}
-     
+                {spinner}
+                {search}
+                {content} 
+                <SectionDataListProduct
+                    show={showProduct}
+                    onHide={this.hideProductData}
+                    dataModal={dataModal}
+                />
             </Fragment>
         )
     }

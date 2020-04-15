@@ -24,7 +24,7 @@ export default class LoginPage extends Component {
             this.setState({
                 loading: false
             })}
-        }, 2000);
+        }, 2500);
     }
     
     handleClick = e => {

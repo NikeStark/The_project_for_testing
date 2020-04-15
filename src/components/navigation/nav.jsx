@@ -18,8 +18,7 @@ const Nav = () => {
             <nav>
                 <ul className="nav">
                     <li><NavLink to="/home">Home</NavLink></li>
-                    <li><NavLink to="/section-data-list">Book's API</NavLink></li>
-                    <li><NavLink to="/section-data-list">List items</NavLink></li>
+                    <li><NavLink to="/section-data-list">Fake API</NavLink></li>
                     <li><NavLink to="/login">Log in</NavLink></li>
                 </ul>
             </nav>

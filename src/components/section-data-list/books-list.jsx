@@ -2,23 +2,24 @@ import React from 'react';
 import BookItem from './book-item.jsx';
 import PropTypes from 'prop-types';
 
-const BooksList = ({books}) => {
+const BooksList = ({filteredData, getProductData}) => {
     
-    const bookElements = books.map((item) => {
-        const{id, ...BooksProps} = item;
+    const bookElements = filteredData.map((data) => {
+        const{id, ...BooksProps} = data;
 
-        return <li key={id}><BookItem {...BooksProps}/></li>
+        return <li key={id} onClick={() => getProductData(data)}><BookItem {...BooksProps}/></li>
     })
-
-    return(
+    
+    return(   
         <ul className="book-elements">
             {bookElements}
-        </ul>
+        </ul>  
     )
 }
 
 export default BooksList;
 
 BooksList.propTypes = {
-    books: PropTypes.array
+    filteredData: PropTypes.array,
+    getProductData: PropTypes.func
 }

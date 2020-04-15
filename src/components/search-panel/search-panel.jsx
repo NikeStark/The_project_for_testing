@@ -2,12 +2,11 @@ import React from 'react';
 
 import "./search-panel.css";
 
-const SearchPanel = ({ }) => {
+const SearchPanel = ({filter, handleChange}) => {
     return(
-        <div>
-            <form action="" >
-            <input type="text" placeholder="Search the book"  />
-            </form>
+        <div className="search-area">
+            <input type="text" value={filter}  placeholder="Searching of books..."  onChange={handleChange} />
+            <i className="fas fa-search"></i>
         </div>
     )
 }
