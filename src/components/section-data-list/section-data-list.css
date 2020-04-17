@@ -62,14 +62,18 @@
 }
 
 .wrapper-book .title-and-author{
-     max-width: 220px;
-     height: 75px;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;      
+    max-width: 220px;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;      
 }
 
 .book-sale{
     position: absolute;
     margin: -25px 0 0 170px;
+}
+
+.elfsight-app{
+    overflow: hidden; 
 }

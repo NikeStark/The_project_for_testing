@@ -15,11 +15,15 @@ export default class SectionDataList extends Component{
             data: ArrayBooksData,
             loading: true,
             showProduct: false,
-            dataModal:{
+            dataProduct:{
                 imageLink:"",
                 imgHeight:"",
                 title:"",
                 author:"",
+                describeBook:{
+                    firstIndent:"",
+                    secondIndent:""
+                },
             }
         }
     }
@@ -50,7 +54,7 @@ export default class SectionDataList extends Component{
     getProductData = (data) => {
         this.setState({
             showProduct: true,
-            dataModal: data 
+            dataProduct: data 
         })
     }
 
@@ -61,7 +65,7 @@ export default class SectionDataList extends Component{
     }
 
     render(){
-        const { filter, data, showProduct, dataModal } = this.state;
+        const { filter, data, showProduct, dataProduct } = this.state;
 
         const lowercasedFilter = filter.toLowerCase();
         const filteredData = data.filter(item => {
@@ -78,7 +82,7 @@ export default class SectionDataList extends Component{
         if(filteredData === undefined || filteredData.length == 0){
             return(
             <Fragment>
-                <h2 className="title-over-books">List of books</h2>
+                <h2 className="title-over-books">Book's Store</h2>
                 <SearchFailed />
                 {search}
                 {content} 
@@ -88,14 +92,14 @@ export default class SectionDataList extends Component{
 
         return(
             <Fragment>
-                <h2 className="title-over-books">List of books</h2>
+                <h2 className="title-over-books">Book's Store</h2>
                 {spinner}
                 {search}
                 {content} 
                 <SectionDataListProduct
                     show={showProduct}
                     onHide={this.hideProductData}
-                    dataModal={dataModal}
+                    dataProduct={dataProduct}
                 />
             </Fragment>
         )

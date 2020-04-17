@@ -1,25 +1,92 @@
 .wrapper-data-product {
   position: fixed;
-  top: 15%;
-  right: 20%;
-  bottom: 15%;
-  left: 20%;
+  top: 17%;
+  right: 25%;
+  bottom: 17%;
+  left: 25%;
   padding: 20px;
   box-shadow: 0 10px 30px 0 rgba(127, 127, 127, 0.3);
   background: rgba(255, 255, 255, 1);
+  border-style: solid;
+  color: #CF2371;
+  border-width: 1px;
 }
 
-.title-and-author h3, span{
-  
-}
-
-.button-close, .button-buy{
+.headline-book{
   position: absolute;
-  right: 20px;
-  bottom: 20px;
-  color: rebeccapurple;
+  margin-left: 250px;
+  color: #CF2371;
+  font-size: 26px;
+}
+
+.headline-book p{
+  font-size: 16px;
+  font-style: oblique;
+}
+
+.headline-book span{
+  font-size: 18px;
+  float: left;
+}
+
+.line{
+  position: absolute;
+  border-bottom: 1px solid grey;
+  padding-left: 50%;
+  margin: 75px 0 0 250px;
+}
+
+.describe-book{
+  position: absolute;
+  width: 385px;
+  height: auto;
+  margin: 95px 0 0 250px;
+  color:black;
+  font-size: 16px;
+  text-align: justify;
+  text-indent: 20px; 
+}
+
+.button-close{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: tomato;
+  transition: all 0.3s;
+  opacity: 0.9;
+  cursor: pointer;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.button-close:hover{
+  opacity: 1;
+  transform: rotate(360deg);
 }
 
 .button-buy{
-  right: 70px;
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 16px;
+  color: #CF2371;
+  padding-right: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button-buy:hover{
+  background-color: black;
+}
+
+.button-buy span{
+  color:#972C8E;
+}
+
+.button-buy:hover span{
+  color: #ffffff;
 }

@@ -4,23 +4,35 @@ import './section-data-list-product.css';
 
 export default class SectionDataListProduct extends Component {
   render() {
-    console.log(this.props.show);
+     
     return (
         <Fragment>
         {this.props.show && (
           <div className="wrapper-data-product">
-
-            <img src={this.props.dataModal.imageLink} 
-            height={this.props.dataModal.imgHeight} 
-            alt={this.props.dataModal.title}/>
-
-            <div className="title-and-author">
-                <h3>{this.props.dataModal.title}</h3>
-                <span>{this.props.dataModal.author}</span>
+            
+            <div className="headline-book">
+                <h3>{this.props.dataProduct.title}</h3>
+                <span><p>Author:</p>{this.props.dataProduct.author}</span>
             </div>
+
+            <span className='line'></span>
+
+            <div className="describe-book">
+            <p>{this.props.dataProduct.describeBook.firstIndent}</p>
+            <p>{this.props.dataProduct.describeBook.secondIndent}</p>
+            </div>
+
+            <img src={this.props.dataProduct.imageLink} 
+            height={this.props.dataProduct.imgHeight} 
+            alt={this.props.dataProduct.title}/>
+
             <div className="wrapper-button"> 
-            <button onClick={this.props.onHide} className="button-buy">Buy</button>
-            <button onClick={this.props.onHide} className="button-close">Close</button>
+            <span onClick={this.props.onHide} className="button-buy">
+              <i className="fas fa-shopping-cart"><span>Buy up</span></i>
+            </span>
+            <span onClick={this.props.onHide} className="button-close">
+              <i className="fas fa-sign-out-alt fa-2x"></i>
+            </span>
             </div>
           </div>
         )}
