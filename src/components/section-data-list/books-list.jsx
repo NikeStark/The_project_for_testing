@@ -9,13 +9,13 @@ const BooksList = ({filteredData, getProductData}) => {
 
         return <li key={id} onClick={() => getProductData(data)}><BookItem {...BooksProps}/></li>
     })
-    
+
     return(
         <Fragment>
         <div className="elfsight-app"> 
             <div className="elfsight-app-abade773-fb21-4e72-bea6-60b7acf901bf"></div>
         </div>
-        <ul className="book-elements">
+        <ul className='book-elements'>
             {bookElements}
         </ul>  
         </Fragment>  

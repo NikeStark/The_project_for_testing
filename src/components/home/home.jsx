@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { Redirect } from 'react-router-dom';
+import VideoPlayer from '../video-player/video-player.jsx';
 import PropTypes from 'prop-types';
 
 import './home.css';
@@ -12,6 +13,7 @@ const Home = ({isLoggedIn}) => {
             <Fragment>
                 <div className="wrapper-home">
                     <p>Home</p>
+                    <VideoPlayer />
                 </div>
             </Fragment>
         )

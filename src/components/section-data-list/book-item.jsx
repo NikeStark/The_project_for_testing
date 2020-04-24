@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BookItem = ({id, imageLink, imgHeight, title, author, sale}) => {
+
     return(
         <div className='wrapper-book'>
             <div className="book-sale">

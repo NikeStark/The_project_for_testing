@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const MyModal = ({handleModal}) => {
+const GoogleAdv = ({handleModal}) => {
     return(
         <div className="wrapper-modal">
               <a href="https://www.google.com/" target="_blank">
@@ -12,4 +13,8 @@ const MyModal = ({handleModal}) => {
     )
 }
 
-export default MyModal;
+export default GoogleAdv;
+
+GoogleAdv.propTypes = {
+  handleModal: PropTypes.func
+}

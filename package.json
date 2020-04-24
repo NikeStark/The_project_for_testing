@@ -39,11 +39,18 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "@types/jquery": "^3.3.35",
     "core-js": "3.6.4",
+    "counterpart": "^0.18.6",
     "eslint-config-airbnb": "^17.1.0",
+    "jquery": "^3.5.0",
+    "jquery-react": "^1.0.0",
     "prop-types": "15.6.2",
-    "react": "16.12.0",
+    "react": "^16.12.0",
     "react-dom": "16.12.0",
-    "react-router-dom": "5.1.2"
+    "react-interpolate-component": "^0.12.0",
+    "react-player": "^1.15.3",
+    "react-router-dom": "5.1.2",
+    "react-translate-component": "^0.15.1"
   }
 }

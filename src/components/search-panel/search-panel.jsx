@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import "./search-panel.css";
 
@@ -12,3 +13,8 @@ const SearchPanel = ({filter, handleChange}) => {
 }
 
 export default SearchPanel;
+
+SearchPanel.propTypes = {
+    filter: PropTypes.string,
+    handleChange: PropTypes.func
+}

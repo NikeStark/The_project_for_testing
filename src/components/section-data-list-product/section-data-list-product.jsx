@@ -22,9 +22,14 @@ export default class SectionDataListProduct extends Component {
             <p>{this.props.dataProduct.describeBook.secondIndent}</p>
             </div>
 
+            {
+            this.props.dataProduct.imageLink == null || this.props.dataProduct.imageLink.length == 0 ?
+            <img src='https://goldvision.in/ClientPhotoGallery/goldvision.in/ProductImages/100_241220191654110.jpg' 
+            height={260} alt={this.props.dataProduct.title} style={{marginTop:"50px"}}/> : 
             <img src={this.props.dataProduct.imageLink} 
             height={this.props.dataProduct.imgHeight} 
             alt={this.props.dataProduct.title}/>
+            }
 
             <div className="wrapper-button"> 
             <span onClick={this.props.onHide} className="button-buy">

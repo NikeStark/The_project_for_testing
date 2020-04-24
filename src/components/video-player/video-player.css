@@ -1,0 +1,39 @@
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+  }
+
+  .react-player {
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    right: 30%;
+    border: 1.5px solid greenyellow;
+  }
+
+  .player{
+      position: absolute;
+      top: 0;   
+      left: 28%;
+      padding: 5px 0;
+  }
+
+  .player--is-complete .sticker{
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+  }
+
+  .player--is-complete .label{
+    display: block ;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+  .sticker, .label{
+      display: none;
+  }
+

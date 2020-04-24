@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import MyModal from '../modal-view/modal-data.jsx';
+import GoogleAdv from '../modal-view/modal-data.jsx';
 
 import './modal-view.css';
 
@@ -29,7 +29,7 @@ export default class ModalView extends Component {
      
     return (
       <Fragment>
-        { this.state.showModal && <MyModal handleModal={this.handleModal}/> }
+        { this.state.showModal && <GoogleAdv handleModal={this.handleModal}/> }
         {/*<button onClick={this.handleModal}>
             {showModal && <span>Close it</span>}
             {!showModal && <span>Show it</span>}

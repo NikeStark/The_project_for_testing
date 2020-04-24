@@ -15,17 +15,19 @@ export default class SectionDataList extends Component{
             data: ArrayBooksData,
             loading: true,
             showProduct: false,
-            dataProduct:{
-                imageLink:"",
-                imgHeight:"",
-                title:"",
-                author:"",
-                describeBook:{
-                    firstIndent:"",
-                    secondIndent:""
-                },
-            }
+            dataProduct: this.productData,
         }
+    }
+
+    productData = {
+        imageLink:"",
+        imgHeight:"",
+        title:"",
+        author:"",
+        describeBook:{
+            firstIndent:"",
+            secondIndent:""
+        },
     }
 
     fetchBooks = () => {
@@ -76,7 +78,7 @@ export default class SectionDataList extends Component{
 
         const{loading} = this.state;
         const spinner = loading ? <Spinner /> : null;
-        const content = !loading ? <BooksList filteredData={filteredData} getProductData={this.getProductData}/> : null;
+        const content = !loading ? <BooksList filteredData={filteredData} getProductData={this.getProductData} /> : null;
         const search = !loading ? <SearchPanel handleChange={this.handleChange}/> : null;
 
         if(filteredData === undefined || filteredData.length == 0){
