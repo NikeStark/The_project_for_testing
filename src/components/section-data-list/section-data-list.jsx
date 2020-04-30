@@ -6,6 +6,7 @@ import Spinner from '../spinner/spinner.jsx';
 import SearchPanel from '../search-panel/search-panel.jsx';
 import SearchFailed from '../search-panel/search-failed.jsx';
 import SectionDataListProduct from '../section-data-list-product/section-data-list-product.jsx';
+import Ap from '../pagination/ap.jsx';
 
 export default class SectionDataList extends Component{
     constructor(){
@@ -80,6 +81,7 @@ export default class SectionDataList extends Component{
         const spinner = loading ? <Spinner /> : null;
         const content = !loading ? <BooksList filteredData={filteredData} getProductData={this.getProductData} /> : null;
         const search = !loading ? <SearchPanel handleChange={this.handleChange}/> : null;
+        const pagination = !loading ? <Ap /> : null;
 
         if(filteredData === undefined || filteredData.length == 0){
             return(
@@ -98,6 +100,7 @@ export default class SectionDataList extends Component{
                 {spinner}
                 {search}
                 {content} 
+                {pagination}
                 <SectionDataListProduct
                     show={showProduct}
                     onHide={this.hideProductData}

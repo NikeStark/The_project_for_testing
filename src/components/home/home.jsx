@@ -13,7 +13,7 @@ const Home = ({isLoggedIn}) => {
             <Fragment>
                 <div className="wrapper-home">
                     <p>Home</p>
-                    <VideoPlayer />
+                    <VideoPlayer />  
                 </div>
             </Fragment>
         )

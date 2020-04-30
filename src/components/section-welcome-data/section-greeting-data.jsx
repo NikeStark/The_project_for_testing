@@ -46,7 +46,7 @@ export default class SectionGreetingData extends Component {
                 <option value="ch">🇨🇳&emsp;Ch</option>
             </select>
             </div>
-
+           
             <Translate content="title" component="h2"/>
             
             <div className="context">
