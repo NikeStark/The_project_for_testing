@@ -65,14 +65,14 @@ export default class SectionGreetingData extends Component {
             </div>
     
             <div className="button_send_request">
-                <Translate content="p5" component="p" />
-                <Link to="/google-form">
-                        <button className="pulse-button"></button>
-                </Link> 
                 <div className="arrow-to-form">
-            <img src="https://pngimage.net/wp-content/uploads/2018/06/3d-%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B8-png-.png" 
-                height='35' alt="logo" />
-            </div>
+                    <Translate content="p5" component="p"/>
+                    <img src="https://pngimage.net/wp-content/uploads/2018/06/3d-%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%BA%D0%B8-png-.png" 
+                    height='35' alt="logo" />
+                </div>
+                <Link to="/google-form">
+                    <button className="pulse-button"></button>
+                </Link> 
             </div>
              
         </Fragment>

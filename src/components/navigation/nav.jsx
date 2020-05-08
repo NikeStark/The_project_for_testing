@@ -3,11 +3,12 @@ import {NavLink} from 'react-router-dom';
 
 import './nav.css';
 
-import Translate from 'react-translate-component';
+import Translate from "react-translate-component";
 
 const tooltip = "React Documentation";
 
 const Nav = () => {
+
     return(
         <div className="navigation">
              <div className="logoWrapper">
@@ -20,7 +21,7 @@ const Nav = () => {
             <nav>
                 <ul className="nav">
                     <li><NavLink to="/home">
-                       <Translate content="home" component="ul"/>
+                        <Translate content="home" component="ul"/>
                         </NavLink>
                     </li>
                     <li><NavLink to="/section-data-list">

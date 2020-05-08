@@ -6,7 +6,9 @@ import Spinner from '../spinner/spinner.jsx';
 import SearchPanel from '../search-panel/search-panel.jsx';
 import SearchFailed from '../search-panel/search-failed.jsx';
 import SectionDataListProduct from '../section-data-list-product/section-data-list-product.jsx';
-import Ap from '../pagination/ap.jsx';
+import Pagination from '../pagination/pagination.jsx';
+
+const titleOverBooks = <h2 className="title-over-books">Book's Store</h2>
 
 export default class SectionDataList extends Component{
     constructor(){
@@ -17,6 +19,7 @@ export default class SectionDataList extends Component{
             loading: true,
             showProduct: false,
             dataProduct: this.productData,
+            pageOfItems: ArrayBooksData
         }
     }
 
@@ -30,7 +33,7 @@ export default class SectionDataList extends Component{
             secondIndent:""
         },
     }
-
+    
     fetchBooks = () => {
         this.setState({
             loading: false
@@ -67,11 +70,17 @@ export default class SectionDataList extends Component{
         })
     }
 
-    render(){
-        const { filter, data, showProduct, dataProduct } = this.state;
+    onChangePage = (pageOfItems) => {
+        this.setState({
+           pageOfItems: pageOfItems
+        });
+    }
 
+    render(){
+        const { filter, data, showProduct, dataProduct, pageOfItems} = this.state;
+        
         const lowercasedFilter = filter.toLowerCase();
-        const filteredData = data.filter(item => {
+        const filteredData = pageOfItems.filter(item => {
           return Object.keys(item).some(key =>
             item[key].toString().toLowerCase().includes(lowercasedFilter)
           );
@@ -81,12 +90,12 @@ export default class SectionDataList extends Component{
         const spinner = loading ? <Spinner /> : null;
         const content = !loading ? <BooksList filteredData={filteredData} getProductData={this.getProductData} /> : null;
         const search = !loading ? <SearchPanel handleChange={this.handleChange}/> : null;
-        const pagination = !loading ? <Ap /> : null;
+        const pagination = !loading ? <Pagination items={data} onChangePage={this.onChangePage} /> : null;
 
         if(filteredData === undefined || filteredData.length == 0){
             return(
             <Fragment>
-                <h2 className="title-over-books">Book's Store</h2>
+                {titleOverBooks}
                 <SearchFailed />
                 {search}
                 {content} 
@@ -96,7 +105,7 @@ export default class SectionDataList extends Component{
 
         return(
             <Fragment>
-                <h2 className="title-over-books">Book's Store</h2>
+                {titleOverBooks}
                 {spinner}
                 {search}
                 {content} 

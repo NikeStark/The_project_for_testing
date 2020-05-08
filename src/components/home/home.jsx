@@ -6,15 +6,15 @@ import PropTypes from 'prop-types';
 import './home.css';
 
 const Home = ({isLoggedIn}) => {
-
+    
     if(isLoggedIn){
-        
+
         return(
             <Fragment>
                 <div className="wrapper-home">
-                    <p>Home</p>
-                    <VideoPlayer />  
+                    <h2>Have pleasure!</h2>   
                 </div>
+                    <VideoPlayer />
             </Fragment>
         )
     }

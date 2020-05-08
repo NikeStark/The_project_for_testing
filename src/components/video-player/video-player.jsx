@@ -15,13 +15,12 @@ const VideoPlayer = () => {
     }
 
     return(
-        
         <div className='player-wrapper'>
         <ReactPlayer
           url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
           className='react-player'
           controls
-          width='480px'
+          width='540px'
           height='240px'
           onProgress = {handleWatchComplete}
         />

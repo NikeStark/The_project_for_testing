@@ -3,11 +3,11 @@ import BookItem from './book-item.jsx';
 import PropTypes from 'prop-types';
 
 const BooksList = ({filteredData, getProductData}) => {
-    
+   
     const bookElements = filteredData.map((data) => {
         const{id, ...BooksProps} = data;
-
-        return <li key={id} onClick={() => getProductData(data)}><BookItem {...BooksProps}/></li>
+        
+        return <li key={id} onClick={() => getProductData(data)}><BookItem {...BooksProps} /></li>
     })
 
     return(

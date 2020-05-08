@@ -56,8 +56,7 @@ export default class App extends Component{
                                 />
 
                                 <Route path="/section-data-list" component={SectionDataList} />
-                                <Route path="/section-data-list" component={SectionDataList} />
-
+                                
                                 {/*<Redirect to="/"/>*/}
                                 <Route render={() => <h2 
                                     style={{textAlign:"center", marginTop:"30px"}}>

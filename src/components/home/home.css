@@ -1,8 +1,15 @@
 .wrapper-home{
-    height: 100vh;
+    display: flex;
+    justify-content: center;  
 }
 
-.ar{
-    display: flex;
-    justify-content: center;
+.wrapper-home h2{
+    text-align: center;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    margin: -20px 40% 45px 40%;
+    padding-bottom: 3px;
+    border-bottom: 3px solid transparent;
+    border-color: tomato;
 }
